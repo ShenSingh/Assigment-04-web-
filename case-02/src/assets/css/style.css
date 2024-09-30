@@ -1,0 +1,40 @@
+body{
+    background-color: darkblue;
+}
+.circle {
+    font-family: 'Roboto', sans-serif;
+    width: 300px;
+    aspect-ratio: 1/1;
+    background-color: darkslategray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s;
+    margin: 0;
+}
+
+.circle::before {
+    content: '';
+    border: white 15px solid;
+    border-radius: 100%;
+    border-top-color: red;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.circle:hover::before {
+    transform: rotate(360deg);
+    transition-duration: 2s;
+}
